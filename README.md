@@ -6,6 +6,7 @@ Documentation includes configuration steps, validation evidence, and troubleshoo
 
 
 Architecture Summary
+
 This lab follows a modern endpoint lifecycle:
 
 User Sign-In (Entra ID)
