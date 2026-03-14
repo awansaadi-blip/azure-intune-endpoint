@@ -1,0 +1,98 @@
+# Application Deployment – VLC Media Player (Microsoft Intune)
+
+## Objective
+
+Deploy a Microsoft Store application using Microsoft Intune and validate successful installation on a managed Windows endpoint.
+
+---
+
+## Environment
+
+Platform: Microsoft Intune (Endpoint Manager)  
+Application Type: Microsoft Store App (New)  
+Application: VLC Media Player  
+Publisher: VideoLAN  
+Device: INTUNEWIN11_01 (Windows 11 Hyper-V VM)  
+Assignment Method: Required deployment to INTUNE-Test-Devices group  
+
+---
+
+## Configuration Steps
+
+Application created within Intune:
+
+Path:
+
+Intune Admin Center → Apps → Windows → Add → Microsoft Store app (new)
+
+Steps performed:
+
+- Selected VLC Media Player from Microsoft Store catalog
+- Configured application details and description
+- Assigned application as Required to test device group
+
+Screenshot:
+
+![VLC App Overview](../screenshots/15-app-overview-vlc-created.png)
+
+---
+
+## Deployment Execution
+
+After assignment:
+
+- Device powered on
+- Manual sync initiated
+- Microsoft Intune Management Extension triggered installation
+
+Screenshot:
+
+![App Install Notification](../screenshots/16-app-install-notification-success.png)
+
+---
+
+## Deployment Monitoring
+
+Installation status monitored through Intune:
+
+Path:
+
+Intune Admin Center → Apps → Monitor → Device install status
+
+Screenshot:
+
+![Device Install Success](../screenshots/17-app-device-install-success.png)
+
+---
+
+## Endpoint Validation
+
+Final validation performed directly on managed device:
+
+- VLC Media Player present on desktop
+- Application launched successfully
+- Installation confirmed functional
+
+Screenshot:
+
+![VLC Installed Locally](../screenshots/18-device-vlc-installed-local.png)
+
+---
+
+## Troubleshooting Encountered
+
+Initial installation status remained pending until device synchronization was triggered manually.  
+After sync, Intune processed deployment successfully.
+
+---
+
+## Outcome
+
+Successfully demonstrated:
+
+- Microsoft Store app deployment through Intune
+- Required application assignment
+- Deployment monitoring and validation
+- Endpoint-level verification of installation
+
+This phase completes the application lifecycle portion of the endpoint management lab.
